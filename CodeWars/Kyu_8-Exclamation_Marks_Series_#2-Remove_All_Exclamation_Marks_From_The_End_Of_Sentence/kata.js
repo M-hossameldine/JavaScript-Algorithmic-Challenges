@@ -39,4 +39,10 @@ function remove (s){
   return s;
 }
 
+// Another Solution
+function remove (s) {
+  while (s && s.endsWith("!")) s = s.slice(0, -1);
+  return s;
+}
+
 console.log(remove("!Hi! Hi!!!"));    // -> !Hi! Hi
