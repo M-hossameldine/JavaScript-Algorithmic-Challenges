@@ -20,3 +20,13 @@ function sumCubes(n){
 function sumCubes(n){
   return (n*(n+1)/2)**3;
 }
+
+// Solution by other Code warriors
+function sumCubes(n){
+  return [...Array(n+1).keys()]
+            .map( (num, i) => num**3)
+            .reduce( (num, total) => num + total , 0);
+}
+
+
+
