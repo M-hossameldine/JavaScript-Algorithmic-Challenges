@@ -35,6 +35,19 @@ function steps(n, row = 1) {
   steps(n, ++row)
 }
 
+// Recursive Version
+function steps(n, row = 0, stair = '') {
+  if(n === row) {
+    return;
+  }
 
+  if(stair.length === n) {
+    console.log(stair);
+    return steps(n, row + 1);
+  }
+
+  const add = (stair.length <= row) ? '#' : ' ';
+  steps(n, row, stair + add);
+}
 
 module.exports = steps;
