@@ -26,4 +26,15 @@ function steps(n) {
   }
 }
 
+// Iterative refactored version with recursion
+function steps(n, row = 1) {
+  let stair = '#'.repeat(row) + ' '.repeat(n - row);
+  
+  console.log(stair);
+  if(row == n) return;
+  steps(n, ++row)
+}
+
+
+
 module.exports = steps;
