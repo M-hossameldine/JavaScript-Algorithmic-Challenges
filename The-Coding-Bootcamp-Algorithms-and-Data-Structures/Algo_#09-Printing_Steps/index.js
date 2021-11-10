@@ -37,13 +37,16 @@ function steps(n, row = 1) {
 
 // Recursive Version
 function steps(n, row = 0, stair = '') {
+  // Main base case (after finishing the last row, exit)
   if(n === row) {
     return;
   }
 
-  if(stair.length === n) {
+  // Stair base case 
+  if(n === stair.length) {
     console.log(stair);
-    return steps(n, row + 1);
+    steps(n, row + 1);
+    return;
   }
 
   const add = (stair.length <= row) ? '#' : ' ';
